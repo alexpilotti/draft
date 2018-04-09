@@ -21,5 +21,6 @@ spec:
         imagePullPolicy: {{ .Values.image.pullPolicy }}
         ports:
         - containerPort: {{ .Values.service.internalPort }}
+        - containerPort: 22
         resources:
 {{ toYaml .Values.resources | indent 12 }}
